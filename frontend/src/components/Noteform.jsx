@@ -54,7 +54,7 @@ function Noteform() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-80px)] overflow-hidden pt-2 pb-6 flex items-start justify-center bg-slate-50/50">
+    <div className="min-h-[calc(100vh-80px)] overflow-hidden pt-2 pb-2 flex items-start justify-center bg-slate-50/50">
       <div className="max-w-4xl w-full flex flex-col px-4">
         {/* Main Form Area - Centralized and single column */}
         <div
