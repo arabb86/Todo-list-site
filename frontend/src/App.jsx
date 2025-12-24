@@ -14,7 +14,7 @@ function App() {
       <Navbar />
 
       {/* Main Content */}
-      <main className='flex-1 container mx-auto p-4 md:p-6 lg:p-8'>
+      <main className='flex-1 container mx-auto px-4 md:px-6 lg:px-8 py-2 md:py-4'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Createnote />} />
