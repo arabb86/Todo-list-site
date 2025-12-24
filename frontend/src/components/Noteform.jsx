@@ -61,7 +61,7 @@ function Noteform() {
         <div className="grid md:grid-cols-5 gap-4 flex-1 min-h-0">
           {/* Left Side - Form (3 columns) */}
           <div
-            className="md:col-span-3 rounded-xl shadow-xl p-5 border-2 border-slate-200 overflow-y-auto"
+            className="md:col-span-3 rounded-xl shadow-xl p-5 border-2 border-slate-200"
             style={{ backgroundColor: formData.color }}
           >
             <form onSubmit={handleSubmit} className="space-y-3">
@@ -89,7 +89,7 @@ function Noteform() {
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   placeholder="Pour your thoughts here..."
-                  rows="12"
+                  rows="10"
                   className="w-full px-3 py-2 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none transition"
                   required
                 />
@@ -123,7 +123,7 @@ function Noteform() {
                     Add
                   </button>
                 </div>
-                <div className="flex flex-wrap gap-1.5 max-h-16 overflow-y-auto">
+                <div className="flex flex-wrap gap-1.5 max-h-12 overflow-hidden">
                   {formData.tags.map((tag, index) => (
                     <span
                       key={index}
@@ -178,7 +178,7 @@ function Noteform() {
           </div>
 
           {/* Right Side - Color Picker & Tips (2 columns) */}
-          <div className="md:col-span-2 space-y-4 overflow-y-auto">
+          <div className="md:col-span-2 space-y-4">
             {/* Color Picker */}
             <div className="bg-white rounded-xl shadow-xl p-4 border-2 border-slate-200">
               <h3 className="text-lg font-bold text-slate-800 mb-2 flex items-center gap-1">
