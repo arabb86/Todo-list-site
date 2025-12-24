@@ -3,7 +3,9 @@ import Noteform from '../components/Noteform'
 
 function Createnote() {
   return (
-    <div className='flex items-center justify-center h-screen bg-gray-900'><Noteform/></div>
+    <div className='max-w-7xl mx-auto py-8'>
+      <Noteform />
+    </div>
   )
 }
 

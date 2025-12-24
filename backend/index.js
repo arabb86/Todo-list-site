@@ -8,13 +8,16 @@ const app = express()
 dotenv.config()
 const port = process.env.PORT || 4002
 
-// Database Connection Code
-try {
-   mongoose.connect(process.env.MONGO_URL)
-   console.log("conntected to MongoDB")
-} catch (error) {
-    console.log("Error connecting to MongoDB", error)
-}
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("connected to MongoDB");
+  } catch (error) {
+    console.log("Error connecting to MongoDB", error);
+  }
+};
+
+connectDB();
 
 // Routing Middleware
 app.use(express.json())
