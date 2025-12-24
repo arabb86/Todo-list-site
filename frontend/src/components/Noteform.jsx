@@ -58,7 +58,7 @@ function Noteform() {
       <div className="max-w-4xl w-full flex flex-col px-4">
         {/* Main Form Area - Centralized and single column */}
         <div
-          className="rounded-xl shadow-2xl px-8 py-6 border-2 border-slate-200 flex flex-col"
+          className="rounded-xl px-8 py-6 border-2 border-slate-200 flex flex-col"
           style={{ backgroundColor: formData.color }}
         >
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
