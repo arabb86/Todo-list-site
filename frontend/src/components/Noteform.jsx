@@ -54,14 +54,14 @@ function Noteform() {
   };
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden pt-2 flex items-center justify-center">
-      <div className="max-w-4xl w-full h-full flex flex-col px-4">
+    <div className="min-h-[calc(100vh-80px)] overflow-hidden py-4 flex items-center justify-center bg-slate-50/50">
+      <div className="max-w-4xl w-full flex flex-col px-4">
         {/* Main Form Area - Centralized and single column */}
         <div
-          className="rounded-xl shadow-xl px-6 py-4 border-2 border-slate-200 flex flex-col h-full"
+          className="rounded-xl shadow-2xl px-8 py-6 border-2 border-slate-200 flex flex-col"
           style={{ backgroundColor: formData.color }}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-3">
+          <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             {/* Title */}
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
@@ -72,13 +72,13 @@ function Noteform() {
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 placeholder="What's on your mind?"
-                className="w-full px-3 py-2 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-base font-medium"
+                className="w-full px-4 py-2 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition text-base font-medium shadow-sm"
                 required
               />
             </div>
 
-            {/* Content - Adjusted rows to fit everything on screen */}
-            <div className="flex-1 min-h-0">
+            {/* Content - Shortened and fixed height */}
+            <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
                 Content
               </label>
@@ -86,7 +86,8 @@ function Noteform() {
                 value={formData.content}
                 onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                 placeholder="Pour your thoughts here..."
-                className="w-full h-full px-3 py-2 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none transition"
+                rows="6"
+                className="w-full px-4 py-3 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none transition shadow-sm"
                 required
               />
             </div>
