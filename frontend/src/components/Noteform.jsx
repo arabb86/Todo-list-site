@@ -54,14 +54,14 @@ function Noteform() {
   };
 
   return (
-    <div className="h-[calc(100vh-80px)] overflow-hidden pt-4 flex items-center justify-center">
-      <div className="max-w-2xl w-full h-full flex flex-col px-4">
+    <div className="h-[calc(100vh-80px)] overflow-hidden pt-2 flex items-center justify-center">
+      <div className="max-w-4xl w-full h-full flex flex-col px-4">
         {/* Main Form Area - Centralized and single column */}
         <div
-          className="rounded-xl shadow-xl p-6 border-2 border-slate-200 flex flex-col h-full"
+          className="rounded-xl shadow-xl px-6 py-4 border-2 border-slate-200 flex flex-col h-full"
           style={{ backgroundColor: formData.color }}
         >
-          <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-4">
+          <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-3">
             {/* Title */}
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
