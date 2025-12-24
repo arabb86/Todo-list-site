@@ -54,24 +54,8 @@ function Noteform() {
   };
 
   return (
-    <div className="h-[calc(100vh-120px)] overflow-hidden">
+    <div className="h-[calc(100vh-80px)] overflow-hidden pt-4">
       <div className="max-w-6xl mx-auto h-full flex flex-col">
-        {/* Compact Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 rounded-2xl p-6 mb-4 shadow-xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-
-          <div className="relative z-10 text-center">
-            <div className="flex justify-center mb-2">
-              <Lightbulb className="w-8 h-8 text-yellow-300" />
-            </div>
-            <h1 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">
-              Capture Your Brilliance ✨
-            </h1>
-            <p className="text-sm text-purple-100">
-              Every great idea starts with a single thought
-            </p>
-          </div>
-        </div>
 
         {/* Form Container - Fits remaining space */}
         <div className="grid md:grid-cols-5 gap-4 flex-1 min-h-0">
@@ -105,7 +89,7 @@ function Noteform() {
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   placeholder="Pour your thoughts here..."
-                  rows="5"
+                  rows="12"
                   className="w-full px-3 py-2 bg-white/90 backdrop-blur-sm border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none transition"
                   required
                 />
@@ -207,8 +191,8 @@ function Noteform() {
                     type="button"
                     onClick={() => setFormData({ ...formData, color: color.value })}
                     className={`h-12 rounded-lg border-4 transition-all hover:scale-105 shadow-md ${formData.color === color.value
-                        ? 'border-primary-600 scale-105 ring-2 ring-primary-200'
-                        : 'border-slate-300'
+                      ? 'border-primary-600 scale-105 ring-2 ring-primary-200'
+                      : 'border-slate-300'
                       }`}
                     style={{ backgroundColor: color.value }}
                     title={color.name}
